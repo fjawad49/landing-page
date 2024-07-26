@@ -2861,12 +2861,28 @@ input, select, textarea {
 		.main.style2 {
 			background-color: #333;
 			color: rgba(255, 255, 255, 0.75);
+		}
+
+		.background1 {
+			background-color: #333;
+			color: rgba(255, 255, 255, 0.75);
 			background-attachment: scroll,						;
 			background-image: url("images/moon.jpg");
 			background-repeat: no-repeat;			;
 			background-size: cover;
 			font-weight: 500;
 		}
+
+		.background2 {
+			background-color: #333;
+			color: rgba(255, 255, 255, 0.75);
+			background-attachment: scroll,						;
+			background-image: url("images/beach2.jpg");
+			background-repeat: no-repeat;			;
+			background-size: cover;
+			font-weight: 500;
+		}
+		
 
 		.main.style1 a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
