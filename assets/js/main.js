@@ -30,3 +30,38 @@
 		$('.scrolly').scrolly();
 
 })(jQuery);
+
+document.addEventListener('scroll', function() {
+    const scrollText = document.querySelector('.scroll-text');
+    const scrollPosition = window.scrollY;
+
+    // Adjust this value based on when you want the animation to trigger
+    const triggerPoint = window.innerHeight / 1.5;
+
+    if (scrollPosition > triggerPoint) {
+        scrollText.classList.add('visible');
+    } else {
+        scrollText.classList.remove('visible');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollTexts = document.querySelectorAll('.scroll-text');
+
+    function checkScroll() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        scrollTexts.forEach(scrollText => {
+            const textPosition = scrollText.getBoundingClientRect().top + window.scrollY + scrollText.clientHeight / 2;
+
+            if (scrollPosition > textPosition) {
+                scrollText.classList.add('visible');
+            } else {
+                scrollText.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Initial check in case the elements are already in view
+});
